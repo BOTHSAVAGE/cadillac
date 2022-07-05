@@ -33,7 +33,7 @@ import java.util.List;
 /**
  * 数据源管理
  *
- * @author lzy
+ * @author lzyddddd
  * @date 2019-03-31 16:00:20
  */
 @RestController
@@ -45,7 +45,7 @@ public class GenDsConfController {
 
 	private final GenDatasourceConfService datasourceConfService;
 
-	/**
+	/**ddd
 	 * 分页查询
 	 * @param page 分页对象
 	 * @param datasourceConf 数据源表
