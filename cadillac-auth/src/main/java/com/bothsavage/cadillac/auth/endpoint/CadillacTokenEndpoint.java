@@ -68,8 +68,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * @author lengleng
+ * @author lyl,y
  * @date 2019/2/1 删除token端点
+ *
+ * 这个类的作用是什么
  */
 @Slf4j
 @RestController
@@ -102,11 +104,22 @@ public class CadillacTokenEndpoint {
 		return modelAndView;
 	}
 
+	/**
+	 * 这个是gamma的
+	 * @param principal 的1
+	 * @param modelAndView 得到1
+	 * @param clientId 的的
+	 * @param scope
+	 * @param state
+	 * @return
+	 */
 	@GetMapping("/confirm_access")
-	public ModelAndView confirm(Principal principal, ModelAndView modelAndView,
-			@RequestParam(OAuth2ParameterNames.CLIENT_ID) String clientId,
-			@RequestParam(OAuth2ParameterNames.SCOPE) String scope,
-			@RequestParam(OAuth2ParameterNames.STATE) String state) {
+	public ModelAndView confirm(Principal principal,
+								ModelAndView modelAndView,
+								@RequestParam(OAuth2ParameterNames.CLIENT_ID) String clientId,
+								@RequestParam(OAuth2ParameterNames.SCOPE) String scope,
+								@RequestParam(OAuth2ParameterNames.STATE) String state) {
+
 		SysOauthClientDetails clientDetails = RetOps
 				.of(clientDetailsService.getClientDetailsById(clientId, SecurityConstants.FROM_IN)).getData()
 				.orElseThrow(() -> new OAuthClientException("clientId 不合法"));
@@ -118,6 +131,7 @@ public class CadillacTokenEndpoint {
 		modelAndView.addObject("principalName", principal.getName());
 		modelAndView.setViewName("ftl/confirm");
 		return modelAndView;
+
 	}
 
 	/**
