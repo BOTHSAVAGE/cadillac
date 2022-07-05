@@ -1,0 +1,3 @@
+com.bothsavage.cadillac.common.feign.CadillacFeignAutoConfiguration
+com.bothsavage.cadillac.common.feign.sentinel.SentinelAutoConfiguration
+com.bothsavage.cadillac.common.feign.sentinel.handle.GlobalBizExceptionHandler

@@ -1,0 +1,2 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+    com.bothsavage.cadillac.common.log.init.ApplicationLoggerInitializer

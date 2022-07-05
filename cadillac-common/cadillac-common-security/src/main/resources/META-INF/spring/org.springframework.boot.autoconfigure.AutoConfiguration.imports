@@ -1,0 +1,7 @@
+com.bothsavage.cadillac.common.security.service.CadillacUserDetailsServiceImpl
+com.bothsavage.cadillac.common.security.service.CadillacAppUserDetailsServiceImpl
+com.bothsavage.cadillac.common.security.service.CadillacRedisOAuth2AuthorizationService
+com.bothsavage.cadillac.common.security.service.CadillacRedisOAuth2AuthorizationConsentService
+com.bothsavage.cadillac.common.security.component.CadillacSecurityInnerAspect
+com.bothsavage.cadillac.common.security.component.CadillacSecurityMessageSourceConfiguration
+com.bothsavage.cadillac.common.security.service.CadillacRemoteRegisteredClientRepository

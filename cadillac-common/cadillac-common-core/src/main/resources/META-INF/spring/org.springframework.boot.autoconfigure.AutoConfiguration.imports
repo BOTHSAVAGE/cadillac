@@ -1,0 +1,6 @@
+com.bothsavage.cadillac.common.core.config.TaskExecutorConfiguration
+com.bothsavage.cadillac.common.core.config.JacksonConfiguration
+com.bothsavage.cadillac.common.core.config.RedisTemplateConfiguration
+com.bothsavage.cadillac.common.core.config.RestTemplateConfiguration
+com.bothsavage.cadillac.common.core.util.SpringContextHolder
+com.bothsavage.cadillac.common.core.config.WebMvcConfiguration

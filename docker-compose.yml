@@ -1,0 +1,94 @@
+version: '3'
+services:
+  cadillac-mysql:
+    build:
+      context: ./db
+    environment:
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+    container_name: cadillac-mysql
+    image: cadillac-mysql
+    ports:
+      - 3306:3306
+
+  cadillac-redis:
+    image: redis:7.0.0
+    ports:
+      - 6379:6379
+    restart: always
+    container_name: cadillac-redis
+    hostname: cadillac-redis
+
+  cadillac-register:
+    build:
+      context: ./cadillac-register
+    restart: always
+    ports:
+      - 8848:8848
+    container_name: cadillac-register
+    hostname: cadillac-register
+    image: cadillac-register
+
+  cadillac-gateway:
+    build:
+      context: ./cadillac-gateway
+    restart: always
+    ports:
+      - 9999:9999
+    container_name: cadillac-gateway
+    hostname: cadillac-gateway
+    image: cadillac-gateway
+
+  cadillac-auth:
+    build:
+      context: ./cadillac-auth
+    restart: always
+    container_name: cadillac-auth
+    hostname: cadillac-auth
+    image: cadillac-auth
+
+  cadillac-upms:
+    build:
+      context: ./cadillac-upms/cadillac-upms-biz
+    restart: always
+    container_name: cadillac-upms
+    hostname: cadillac-upms
+    image: cadillac-upms
+
+  cadillac-monitor:
+    build:
+      context: ./cadillac-visual/cadillac-monitor
+    restart: always
+    ports:
+      - 5001:5001
+    container_name: cadillac-monitor
+    hostname: cadillac-monitor
+    image: cadillac-monitor
+
+  cadillac-sentinel:
+    build:
+      context: ./cadillac-visual/cadillac-sentinel-dashboard
+    restart: always
+    image: cadillac-sentinel
+    container_name: cadillac-sentinel
+    ports:
+      - 5003:5003
+
+  cadillac-codegen:
+    build:
+      context: ./cadillac-visual/cadillac-codegen
+    restart: always
+    container_name: cadillac-codegen
+    hostname: cadillac-codegen
+    image: cadillac-codegen
+
+  cadillac-job:
+    build:
+      context: ./cadillac-visual/cadillac-xxl-job-admin
+    restart: always
+    container_name: cadillac-job
+    hostname: cadillac-job
+    image: cadillac-job
+    ports:
+      - 5004:5004

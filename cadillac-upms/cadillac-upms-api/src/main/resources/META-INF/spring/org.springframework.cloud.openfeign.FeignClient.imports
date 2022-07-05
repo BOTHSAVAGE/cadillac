@@ -1,0 +1,7 @@
+com.bothsavage.cadillac.admin.api.feign.RemoteClientDetailsService
+com.bothsavage.cadillac.admin.api.feign.RemoteDictService
+com.bothsavage.cadillac.admin.api.feign.RemoteDeptService
+com.bothsavage.cadillac.admin.api.feign.RemoteLogService
+com.bothsavage.cadillac.admin.api.feign.RemoteTokenService
+com.bothsavage.cadillac.admin.api.feign.RemoteUserService
+com.bothsavage.cadillac.admin.api.feign.RemoteParamService
