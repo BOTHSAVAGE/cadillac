@@ -5,6 +5,12 @@
  <img src="https://img.shields.io/github/license/pig-mesh/pig"/>
 </p>
 
+## 启动顺序
+*  注册中心和命名服务：pig-register/PigNacosApplication.java 
+*  网关：pig-gateway/PigGatewayApplication.java  
+*  权限：pig-auth/PigAuthApplication.java   
+*  后台业务：pig-upms-biz/PigAdminApplication
+
 ## 系统说明
 
 - 基于 Spring Cloud 2021 、Spring Boot 2.7、 OAuth2 的 RBAC **权限管理系统**
