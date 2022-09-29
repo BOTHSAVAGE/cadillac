@@ -5,6 +5,10 @@
  <img src="https://img.shields.io/github/license/pig-mesh/pig"/>
 </p>
 
+## 依赖
+```bash
+docker run  --restart=always  --name mysql8.0   -p 3308:3306  -e MYSQL_ROOT_PASSWORD='root'   -d mysql:8.0
+```
 ## 启动顺序
 *  注册中心和命名服务：pig-register/PigNacosApplication.java 
 *  网关：pig-gateway/PigGatewayApplication.java  
